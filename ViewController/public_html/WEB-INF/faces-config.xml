@@ -3,9 +3,10 @@
   <application>
     <default-render-kit-id>oracle.adf.rich</default-render-kit-id>
         <locale-config>
-      <default-locale>nl</default-locale>
+      <default-locale>en</default-locale>
       <supported-locale>nl</supported-locale>
       <supported-locale>en</supported-locale>
+      <supported-locale>es</supported-locale>
     </locale-config>
   </application>
 </faces-config>

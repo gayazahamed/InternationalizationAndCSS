@@ -1,0 +1,85 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1"
+          xmlns:f="http://java.sun.com/jsf/core"
+          xmlns:h="http://java.sun.com/jsf/html"
+          xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+          xmlns:c="http://java.sun.com/jsp/jstl/core">
+  <c:set var="viewcontrollerBundle"
+         value="#{adfBundle['view.ViewControllerBundle']}"/>
+  <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+  <f:view>
+    <af:document id="d1">
+      <af:form id="f1">
+        <af:panelStretchLayout id="psl1" startWidth="100px" endWidth="100px"
+                               topHeight="100px">
+          <f:facet name="bottom">
+            <af:spacer width="10" height="10" id="spacer2"/>
+          </f:facet>
+          <f:facet name="center">
+            <af:panelSplitter id="ps1" splitterPosition="400">
+              <f:facet name="first">
+                <af:panelGroupLayout layout="horizontal"
+                                     xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+                                     id="pgl1">
+                  <af:panelGroupLayout id="pgl3">
+                    <af:spacer width="50" height="50" id="spacer3"/>
+                  </af:panelGroupLayout>
+                  <af:panelFormLayout id="pfl1">
+                    <f:facet name="footer"/>
+                    <af:spacer width="10" height="50" id="spacer4"/>
+                    <af:inputText label="#{viewcontrollerBundle.INTERNATIONAL_FNAME}"
+                                  id="it1"/>
+                    <af:inputText label="#{viewcontrollerBundle.INTERNATIONAL_LNAME}"
+                                  id="it2"/>
+                    <af:inputText label="#{viewcontrollerBundle.INTERNATIONAL_LNAME}"
+                                  id="it3"/>
+                    <af:inputText label="#{viewcontrollerBundle.INTERNATIONAL_LNAME}"
+                                  id="it4"/>
+                    <af:inputText label="#{viewcontrollerBundle.INTERNATIONAL_LNAME}"
+                                  id="it5"/>
+                    <af:commandButton text="#{viewcontrollerBundle.INTERNATIONAL_SUBMIT}"
+                                      id="cb1"/>
+                  </af:panelFormLayout>
+                </af:panelGroupLayout>
+              </f:facet>
+              <f:facet name="second">
+                <af:panelGroupLayout layout="horizontal"
+                                     xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+                                     id="pgl2">
+                  <af:spacer width="50" height="50" id="spacer5"/>
+                  <af:panelGroupLayout id="pgl4" layout="vertical">
+                    <af:spacer width="10" height="50" id="spacer6"/>
+                    <af:selectOneChoice label="lang" id="sol1"
+                                        value="#{Bean1.language}">
+                      <af:selectItem label="spanish" value="es" id="si2"/>
+                      <af:selectItem label="english" value="en" id="si1"/>
+                    </af:selectOneChoice>
+                    <af:commandButton text="change language" id="commandButton1"
+                                      action="#{Bean1.method1}"/>
+                    <af:spacer width="10" height="30" id="s3"/>
+                    <af:commandLink text="#{viewcontrollerBundle.INTERNATIONAL_TOENGLISH}"
+                                    id="commandButton2"
+                                    action="#{Bean1.changeToEnglish}"/>
+                    <af:spacer width="10" height="20" id="s4"/>
+                    <af:commandLink text="#{viewcontrollerBundle.INTERNATIONAL_TOSPANISH}"
+                                    id="commandButton3"
+                                    action="#{Bean1.changeToSpanish}"/>
+                  </af:panelGroupLayout>
+                </af:panelGroupLayout>
+              </f:facet>
+            </af:panelSplitter>
+          </f:facet>
+          <f:facet name="start">
+            <af:spacer width="10" height="10" id="s2"/>
+          </f:facet>
+          <f:facet name="end">
+            <af:spacer width="10" height="10" id="spacer1"/>
+          </f:facet>
+          <f:facet name="top">
+            <af:spacer width="10" height="10" id="s1"/>
+          </f:facet>
+        </af:panelStretchLayout>
+      </af:form>
+    </af:document>
+  </f:view>
+</jsp:root>

@@ -187,8 +187,8 @@
       </list>
    </hash>
    <hash n="oracle.jdeveloper.model.J2eeSettings">
-      <value n="j2eeWebAppName" v="Internationalization-ViewController-webapp"/>
-      <value n="j2eeWebContextRoot" v="Internationalization-ViewController-context-root"/>
+      <value n="j2eeWebAppName" v="Internationalization"/>
+      <value n="j2eeWebContextRoot" v="Internationalization"/>
    </hash>
    <hash n="oracle.jdeveloper.runner.RunConfigurations">
       <hash n="runConfigurationDefinitions">
